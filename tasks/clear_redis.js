@@ -1,8 +1,5 @@
 /*
- * grunt-clear-redis
- * https://github.com/linnk/grunt-clear-redis
- *
- * Copyright (c) 2015 Juan I. Benavides
+ * Copyright (c) 2016 Urbanhire.com
  * Licensed under the MIT license.
  */
 
