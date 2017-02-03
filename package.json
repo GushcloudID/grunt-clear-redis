@@ -1,7 +1,7 @@
 {
   "name": "grunt-redis-clear",
   "description": "A Grunt plugin to clear keys from your redis database, automatically, when using redis as a cache engine.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/urbanhire/grunt-clear-redis",
   "author": {
     "name": "Juan I. Benavides",
@@ -23,15 +23,15 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt": "~0.4.0"
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt": "~1.0.1"
   },
   "keywords": [
     "gruntplugin redis clear flush cache"
   ],
   "dependencies": {
-    "redis": "^2.6.0-1"
+    "redis": "^2.6.5"
   }
 }

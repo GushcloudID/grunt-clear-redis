@@ -43,7 +43,11 @@ module.exports = function(grunt) {
 				],
 			},
 			another: {
-				database: 1,
+				options: {
+					port: 6379,
+					host: '127.0.0.1',
+					auth_pass: null
+				},
 				keys: [
 					'session_*',
 				],
