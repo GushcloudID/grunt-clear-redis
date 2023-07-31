@@ -38,22 +38,6 @@ module.exports = function(grunt)
 
 		var client = redis.createClient(this.port, this.host, { auth_pass: this.data.options.auth_pass });
 
-		grunt.verbose.writeln('Selecting database: ' + this.data.database);
-
-		client.select(this.data.database, function() {
-			grunt.log.writeln('Deleting keys...');
-
-			for (var i = 0; i < this.data.keys.length; i++)
-			{
-				delete_keys(this.data.keys[i]);
-			}
-		}.bind(this));
-
-		client.on('error', function(err) {
-			grunt.warn('Redis client, error: ' + err);
-			throw err;
-		});
-
 		var delete_keys = function(key_pattern)
 		{
 			client.keys(key_pattern, function(err, keys){
@@ -72,5 +56,21 @@ module.exports = function(grunt)
 				}
 			});
 		};
+
+		grunt.verbose.writeln('Selecting database: ' + this.data.database);
+
+		client.select(this.data.database, function() {
+			grunt.log.writeln('Deleting keys...');
+
+			for (var i = 0; i < this.data.keys.length; i++)
+			{
+				delete_keys(this.data.keys[i]);
+			}
+		}.bind(this));
+
+		client.on('error', function(err) {
+			grunt.warn('Redis client, error: ' + err);
+			throw err;
+		});
 	});
 };
