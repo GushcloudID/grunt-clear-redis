@@ -3,7 +3,12 @@
 > A Grunt plugin to delete keys from your redis database, automatically. Useful when using redis as a cache engine.
 
 ## Getting Started
-This plugin requires Grunt `~0.4.5`
+This plugin requires:
+* grunt `~1.6.1`
+* grunt-contrib-jshint `^3.2.0`
+* grunt-contrib-clean `^2.0.1`
+* grunt-contrib-nodeunit `^5.0.0`
+----------------------------------------------------------------------------
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -51,5 +56,8 @@ And that's all.
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+v2.0.1 Updated depedencies to be compatible with current `node v16.18.1` and `npm v9.8.1` versions.
+
 v0.2.0 Added support for multiple databases.
+
 v0.1.0 First useful but limited prototype.
